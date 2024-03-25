@@ -15,21 +15,25 @@ function Header() {
             delay: 0.5,
             ease: [0, 0.71, 0.2, 1.01],
           }}
-          className="text-[1.7rem] sm:text-[2.5rem] md:text-[3.5rem] text-center mb-7"
+          className="text-[1.7rem] sm:text-[2.5rem] md:text-[3.5rem] text-white text-center mb-7"
         >
-          We Build Beautiful and Dynamic Web Applications
+          {
+            location.pathname === '/home' ? 'I Build Beautiful and Dynamic Web Applications' : 'Lets have a chat'
+          }
         </motion.h1>
-        <motion.button
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{
-            duration: 0.8,
-            delay: 0.5,
-          }}
-          className=" bg-green-500 self-center font-medium rounded-md px-3 py-2 sm:px-4 sm:py-3 hover:bg-transparent hover:border hover:border-secondary "
-        >
-          Get a Quote
-        </motion.button>
+       {  location.pathname === '/home' &&
+         <motion.button
+         initial={{ opacity: 0 }}
+         animate={{ opacity: 1 }}
+         transition={{
+           duration: 0.8,
+           delay: 0.5,
+         }}
+         className=" bg-green-500 self-center font-medium rounded-md px-3 py-2 sm:px-4 sm:py-3 hover:bg-transparent hover:border hover:border-secondary "
+       >
+         Get a Quote
+       </motion.button>
+       }
       </div>
     </header>
   );

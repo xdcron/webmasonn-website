@@ -3,6 +3,8 @@ import { motion, useInView, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
 import Logo from "../Logo/Logo";
 import Link from "../ui/Link";
+import Navbar from "../ui/Navbar";
+import Footer from "../ui/Footer";
 
 function About() {
   //Refs
@@ -58,13 +60,8 @@ function About() {
 
   return (
     <>
-      <header className="h-screen about-me grid ">
-        <nav className=" py-3 px-9 flex justify-between  w-full">
-          <Logo />
-          <ul className="flex  gap-6 mr-6 ">
-            <Link name="Home" to="/home" />
-          </ul>
-        </nav>
+      <header className="h-screen about-me flex justify-center items-center ">
+      <Navbar />
 
         <motion.h1
           initial={{ opacity: 0, scale: 0.5 }}
@@ -76,10 +73,10 @@ function About() {
           }}
           className="text-[1.7rem] sm:text-[2.5rem] md:text-[3.5rem] text-center place-self-center"
         >
-          About Us
+          About
         </motion.h1>
       </header>
-      <section className="flex flex-col gap-12 md:flex-row h-screen px-12 py-12 overflow-hidden">
+      <main className="flex flex-col gap-12 md:flex-row min-h-screen px-12 py-12 overflow-hidden">
         <div className="grid place-content-center gap-6 ">
           <div>
             <motion.h2 className=" flex gap-3 text-[2.6rem] font-bold">
@@ -120,7 +117,7 @@ function About() {
               delay: 0.5,
             }}
           >
-            A self-taught web developer based in Windhoek, Namibia. My journey
+            I am a self-taught web developer based in Windhoek, Namibia. My journey
             in the tech world is all about turning passion into a fulfilling
             career. I find joy in crafting websites and diving into the
             intricacies of coding. It's not just a job; it's a genuine love for
@@ -141,11 +138,10 @@ function About() {
             <p>
               Contact me at:{" "}
               <a
-                href="mailto:chukwudalu90@gmail.com"
+                href="info@webmasonn.com"
                 className="text-secondary"
-                target="_blank"
               >
-                chukwudalu90@gmail.com
+                info@webmasonn.com
               </a>
             </p>
             <p>
@@ -153,7 +149,6 @@ function About() {
               <a
                 href="tel:+264818710474"
                 className="text-secondary"
-                target="_blank"
               >
                 +264 81 871 0474
               </a>
@@ -185,7 +180,7 @@ function About() {
           </div>
         </div>
 
-        <figure className="grid place-content-center order-[-1]">
+        <figure className="grid w-full  place-content-center order-[-1]">
           <motion.img
             ref={ref}
             initial={{ opacity: 0, y: 200 }}
@@ -194,12 +189,13 @@ function About() {
               duration: 0.8,
               delay: 0.5,
             }}
-            className="min-w-[350px] sm:min-w-[470px] h-[300px] sm:h-[500px] object-cover object-top rounded-md"
+            className=" w-[350px] sm:min-w-[470px] h-[300px] sm:h-[500px] object-cover object-top rounded-md"
             src="img-1.jpg"
             alt="Caleb holding flowers"
           />
         </figure>
-      </section>
+      </main>
+      <Footer />
     </>
   );
 }

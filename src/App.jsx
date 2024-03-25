@@ -6,6 +6,7 @@ import {
 import AppLayout from "./ui/AppLayout";
 import Home from "./Home/Home";
 import About from "./About/About";
+import Contact from "./Contact/Contact";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,11 @@ const router = createBrowserRouter([
         index: true,
         path: "/about",
         element: <About />,
+      },
+      {
+        index: true,
+        path: "/contact",
+        element: <Contact />,
       },
     ],
   },

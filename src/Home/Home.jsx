@@ -3,6 +3,7 @@ import ServicesSEO from "../Services/ServicesSEO";
 import { motion, useInView, useAnimation, easeIn } from "framer-motion";
 import { useEffect, useRef } from "react";
 import Header from "../ui/Header";
+import Footer from "../ui/Footer";
 
 function Home() {
   const ref = useRef(null);
@@ -27,7 +28,7 @@ function Home() {
           transition={{ duration: 1, delay: 0.5 }}
           className="text-center text-[1.5rem] sm:text-[2.5rem] text-secondary"
         >
-          What We Offer
+          What I Offer
         </motion.h2>
         <section
           id="services"
@@ -40,15 +41,14 @@ function Home() {
               "https://images.unsplash.com/photo-1590608897129-79da98d15969?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             }
           >
-            Welcome to WebMason, where we transform your digital dreams into
-            captivating realities. Our website development services are tailored
+            Welcome to WebMason, where I transform your digital dreams into
+            captivating realities. My website development services are tailored
             to suit your unique needs, employing an array of powerful tools such
-            as WordPress, HTML, CSS, and JavaScript. At WebMason, we go beyond
+            as WordPress, HTML, CSS, and JavaScript and React. At WebMason, I go beyond
             the ordinary, incorporating cutting-edge technologies like React to
             craft websites and applications that seamlessly blend aesthetics
             with functionality. Whether you're envisioning a dynamic corporate
-            website or an interactive web application, our team of skilled
-            developers is dedicated to bringing your vision to life. Elevate
+            website or an interactive web application, I am dedicated to bringing your vision to life. Elevate
             your online presence with WebMason – where innovation meets
             excellence.
           </Services>
@@ -62,36 +62,28 @@ function Home() {
           >
             Welcome to WebMason, your gateway to heightened online visibility
             and success. Unlock the full potential of your digital presence with
-            our expert SEO services. At WebMason, we meticulously optimize your
+            my expert SEO services. At WebMason, I meticulously optimize your
             website, utilizing proven strategies to enhance search engine
-            rankings and drive organic traffic. Our dedicated team harnesses the
+            rankings and drive organic traffic. I harnesses the
             power of SEO tools and techniques, ensuring your business stands out
             in the digital landscape. From comprehensive keyword research to
-            on-page and off-page optimization, we employ a strategic approach to
+            on-page and off-page optimization, I employ a strategic approach to
             boost your online presence. Trust WebMason to elevate your search
-            engine rankings and pave the way for sustained success. With us,
+            engine rankings and pave the way for sustained success. With me,
             your journey to SEO excellence begins.
           </ServicesSEO>
           <Services
-            title={"Digital Marketing"}
+            title={"Email Hosting"}
             alt={"digital marketing image"}
             img={
-              "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             }
           >
-            Welcome to WebMason, where we go beyond just crafting stunning
-            websites. Elevate your business with our expert digital marketing
-            services, including targeted Google and Facebook Ads. At WebMason,
-            we understand the power of strategic advertising to drive traffic
-            and boost your online presence. Our team harnesses the capabilities
-            of Google and Facebook to deliver impactful campaigns tailored to
-            your business goals. Let us be the architects of your digital
-            success, ensuring that your brand shines brightly in the vast online
-            landscape. Partner with WebMason and watch as your business reaches
-            new heights through effective and engaging online advertising.
+            Welcome to WebMason, your gateway to heightened online visibility for reliable and secure email hosting solutions!  Take your business email to the next level with our robust plans designed to keep you connected and in control. At WebMason, I understand the importance of seamless email communication for business success. I provide top-notch email hosting services to ensure your emails are always up and running, secure, and accessible.  Let us be the foundation of your professional communication, empowering you to focus on what matters most – running your business.  Partner with WebMason and experience the confidence that comes with a reliable email hosting provider.
           </Services>
         </section>
       </main>
+      <Footer />
     </>
   );
 }
